@@ -1,5 +1,6 @@
-/* Pittsburgh Savoyards 80th season main CSS, v. 0.1.3 */
-/* DO NOT EDIT this CSS file directly!!! */
+/* Pittsburgh Savoyards 80th season main CSS, v. 0.1.14 
+
+   DO NOT EDIT this CSS file directly!!! */
 /* GLOBALS *******************************************************************/
 body {
 	background: url("savoyards-bg1.svg");
@@ -74,9 +75,9 @@ header #savoyards-logo img {
 }
 
 /* MAIN CONTENT **************************************************************/
-div.main {
+.main {
 	font-family: 'Spectral', serif;
-	margin: 25px auto 100px;
+	margin: 25px auto;
 	color: #B80018;
 }
 
@@ -100,6 +101,15 @@ aside.sidebar {
 }
 
 /* FOOTER ********************************************************************/
+footer {
+	color: #34774d;
+	font-family: "Philosopher", sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
 /* RESPONSIVE ****************************************************************/
 @media (min-width: 768px) {
 	header .wordmark {
@@ -111,6 +121,7 @@ aside.sidebar {
 	}
 	header #wordmark-svy {
 		text-align: left;
+		margin-top: 2.5vw;
 	}
 	header .eightieth {
 		font-size: 1.5vw;

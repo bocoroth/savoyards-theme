@@ -1,8 +1,9 @@
-$version: "0.1.3";
+$version: "0.1.14";
 
-/* Pittsburgh Savoyards 80th season main CSS, v. #{$version} */
+/* Pittsburgh Savoyards 80th season main CSS, v. #{$version} 
 
-/* DO NOT EDIT this CSS file directly!!! */
+   DO NOT EDIT this CSS file directly!!! */
+
 // ...
 // but you CAN edit this SASS file :)
 
@@ -16,6 +17,12 @@ $font80: 'Norican', cursive;
 $sv-red: #B80018;
 $sv-buff: #FFECB9;
 $sv-green: #24AA56;
+$sv-lt-red: mix($sv-red,#CCCCCC);
+$sv-lt-buff: mix($sv-buff,#CCCCCC);
+$sv-lt-green: mix($sv-green,#CCCCCC);
+$sv-dk-red: mix($sv-red,#444444);
+$sv-dk-buff: mix($sv-buff,#444444);
+$sv-dk-green: mix($sv-green,#444444);
 $white: #FFFFFF;
 $black: #000000;
 
@@ -101,9 +108,9 @@ header {
 
 
 /* MAIN CONTENT **************************************************************/
-div.main {
+.main {
 	font-family: 'Spectral', serif;
-	margin: 25px auto 100px;
+	margin: 25px auto;
 	color: #B80018;
 }
 
@@ -122,8 +129,18 @@ aside.sidebar {
 	margin-top: 25px;
 }
 
-/* FOOTER ********************************************************************/
 
+/* FOOTER ********************************************************************/
+footer {
+	color: $sv-dk-green;
+    font: {
+		family: $h-font;
+		weight: 700;
+		size: 14px;
+	}
+    text-align: center;
+    margin-bottom: 25px;
+}
 
 
 /* RESPONSIVE ****************************************************************/
@@ -138,6 +155,7 @@ aside.sidebar {
 		}
 		#wordmark-svy {
 			text-align: left;
+			margin-top: 2.5vw;
 		}
 		.eightieth {
 			font-size: 1.5vw;
