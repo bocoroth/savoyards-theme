@@ -1,4 +1,4 @@
-$version: "0.0.1";
+$version: "0.1.1";
 
 /* Pittsburgh Savoyards 80th season main CSS, v.{$version} */
 
@@ -10,7 +10,7 @@ $version: "0.0.1";
 $wm-font: 'IM Fell English SC', serif;
 $h-font: 'Philosopher', sans-serif;
 $mn-font: 'Spectral', serif;
-$80-font: 'Norican', cursive;
+$font80: 'Norican', cursive;
 //
 // colors //
 $sv-red: #B80018;
@@ -18,3 +18,134 @@ $sv-buff: #FFECB9;
 $sv-green: #24AA56;
 $white: #FFFFFF;
 $black: #000000;
+
+@mixin no-space() {
+    padding: 0;
+    margin: 0;
+}
+@mixin content-box() {
+	background-color: $sv-buff;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+/* GLOBALS *******************************************************************/
+body {
+	background: url('savoyards-bg1.svg');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+}
+
+
+/* HEADER ********************************************************************/
+header {
+	margin: 0px auto;
+
+	#masthead {
+		@include no-space();
+		font-family: $wm-font;
+		text-align: center;
+		width: auto;
+		color: $sv-red;
+	}
+
+	.wordmark {
+		margin-top: 0;
+		font-size: 12vw;
+	}
+	#wordmark-svy {
+		text-align: center;
+		margin-top: -12vw;
+		letter-spacing: .345vw;
+	}
+	#wordmark-pgh {
+		text-align: center;
+	}
+	.eightieth {
+		font-family: $font80;
+		font-size: 4vw;
+		margin: -3vw 0 0 0;
+		padding: 0;
+		text-align: center;
+		letter-spacing: 1vw;
+		color: $black;
+		span {
+			color: #24AA56;
+			font-weight: bold;
+		}
+	}
+	
+	#savoyards-logo img {
+		width: 100%;
+	}
+}
+
+
+/* BANNER ********************************************************************/
+#banner {
+	background-color: #FFECB9;
+	padding: 5px;
+	border-radius: 15px;
+
+	.banner {
+		text-align: center;
+		
+		img {
+			border-radius: 15px;
+			width: 100%;
+			max-width: 960px;
+		}
+	}
+}
+
+
+/* MAIN CONTENT **************************************************************/
+div.main {
+	font-family: 'Spectral', serif;
+	margin: 25px auto 100px;
+	color: #B80018;
+}
+
+.content{
+	@include content-box();
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $h-font;
+		font-weight: 700;
+	}
+}
+
+
+/* SIDEBAR *******************************************************************/
+aside.sidebar {
+	@include content-box();
+	margin-top: 25px;
+}
+
+/* FOOTER ********************************************************************/
+
+
+
+/* RESPONSIVE ****************************************************************/
+@media (min-width: 768px) {
+	header {
+		.wordmark {
+			margin-top: 2.5vw;
+			font-size: 4.95vw;
+		}
+		#wordmark-pgh {
+			text-align: right;
+		}
+		#wordmark-svy {
+			text-align: left;
+		}
+		.eightieth {
+			font-size: 1.5vw;
+			margin: -5px 0 0 0;
+		}
+	}
+	
+	aside.sidebar {
+		margin-top: 0px;
+	}
+}
