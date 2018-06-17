@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "git://github.com/bocoroth/savoyards-80th.git"
   },
   "keywords": []
 }

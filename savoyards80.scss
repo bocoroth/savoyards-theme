@@ -1,8 +1,10 @@
-$version: "0.1.14";
+$version: "1.6.48";
 
 /* Pittsburgh Savoyards 80th season main CSS, v. #{$version} 
 
-   DO NOT EDIT this CSS file directly!!! */
+   DO NOT EDIT this CSS file directly!!! 
+
+   */
 
 // ...
 // but you CAN edit this SASS file :)
@@ -17,15 +19,16 @@ $font80: 'Norican', cursive;
 $sv-red: #B80018;
 $sv-buff: #FFECB9;
 $sv-green: #24AA56;
-$sv-lt-red: mix($sv-red,#CCCCCC);
-$sv-lt-buff: mix($sv-buff,#CCCCCC);
-$sv-lt-green: mix($sv-green,#CCCCCC);
-$sv-dk-red: mix($sv-red,#444444);
-$sv-dk-buff: mix($sv-buff,#444444);
-$sv-dk-green: mix($sv-green,#444444);
+$sv-lt-red: mix($sv-red,#FFFFFF);
+$sv-lt-buff: mix($sv-buff,#FFFFFF);
+$sv-lt-green: mix($sv-green,#FFFFFF);
+$sv-dk-red: mix($sv-red,#000000);
+$sv-dk-buff: mix($sv-buff,#000000);
+$sv-dk-green: mix($sv-green,#000000);
 $white: #FFFFFF;
 $black: #000000;
-
+//
+// mixins //
 @mixin no-space() {
     padding: 0;
     margin: 0;
@@ -34,32 +37,187 @@ $black: #000000;
 	background-color: $sv-buff;
 	padding: 20px;
 	border-radius: 15px;
+	border: 2px solid $sv-red;
+}
+@mixin form-textbar() {
+	display: inline-block;
+	border-radius: 10px;
+	color: $sv-red;
+	background-color: $sv-lt-buff;
+	font: {
+		family: $h-font;
+		size: 16px;
+	}
+	border: 1px solid $sv-red;
+	padding: 8px 0;
+    margin: 0 4% 10px 0;
+	text-indent: 5px;
+}
+@mixin form-button() {
+	border-radius: 10px;
+	background-color: $sv-red;
+	color: $sv-buff;
+	font: {
+		family: $h-font;
+		size: 16px;
+		weight: bold;
+	}
+	height: 35px;
+	line-height: 37px;
+	border-style: hidden;
+	&:hover {
+		background-color: $sv-lt-red;
+	}
+}
+@mixin admin-sticky-fix( $offset: 0 ) {
+  $narrow-offset: 46px;
+  @if $offset != 0 and type-of($offset) == 'number' {
+    $narrow-offset: $narrow-offset + $offset;
+  }
+  .admin-bar & {
+    top: $narrow-offset;
+  }
 }
 
 /* GLOBALS *******************************************************************/
-body {
-	background: url('savoyards-bg1.svg');
-	background-size: cover;
-	background-position: 50% 50%;
-	background-attachment: fixed;
+
+body#savoyards-eightieth {
+	background: {
+		image: url('img/savoyards-bg.png');
+		color: #FFFCE9;
+		position: center center;
+		attachment: fixed;
+		size: cover;
+	}
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	a:link {
+		color: $sv-dk-green;
+	}
+	a:hover, a:active {
+		color: $sv-lt-green;
+		text-decoration: underline;
+	}
+	a:visited {
+		color: $sv-green;
+	}
+	p {
+		word-break: break-word;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	input[type="text"], select {
+		@include form-textbar();
+	}
+	select {
+		height: 42px;
+	}
+	button, input[type="button"], input[type="submit"] {
+		@include form-button();
+	}
+	input[type="checkbox"], #mc_embed_signup .mc-field-group.input-group input {
+		width: 25px;
+	}
+	
+	// an olde-timey list item
+	ul li {
+		text-indent: -45px;
+		margin-left: 45px;
+	}
+	ul li:before {
+		content: '\261E';
+		font: {
+			size: 3em;
+			family: "Segoe UI Symbol", $h-font; /* MS Edge hack */
+		}
+		position: relative;
+		top: 0.25em;
+		color: $sv-dk-red;
+	}
+	#wpadminbar ul li, #main-nav ul li, #meteor-slideshow ul li, .mc-field-group ul li, .input-group ul li, ul li.widget-container {
+		text-indent: 0;
+		margin-left: 0;		
+	}
+	#wpadminbar ul li:before, #main-nav ul li:before, #meteor-slideshow ul li:before, .mc-field-group ul li:before, .input-group ul li:before, ul li.widget-container:before {
+		content: '';
+		font-size: 0;
+	}
+	
+	.full-width {
+		width: 100%;
+	}
+	
+	// some general overrides
+	#wrapper {
+		padding: 0;
+		background: transparent;
+	}
+	#access, #access .menu-header, div.menu, #colophon, #branding, #main, #wrapper, #site-info {
+		width: 100%;
+	}
+	#main {
+		overflow: unset;
+		padding: 15px 0 0 0;
+	}
+	#container, #content {
+		margin: 0;
+	}
+	.row {
+		width: 100%;
+		margin: 0; 
+	}
+	h1, h2, h3, h4, h5, h6, #content .entry-title {
+		color: $sv-red;
+		font-family: $h-font;
+		font-weight: 700;
+	}
+	#content, #content input, #content textarea {
+		color: $sv-dk-red;
+	}
+	#cancel-comment-reply-link, .form-allowed-tags, #site-info, #wp-calendar, .comment-meta, .entry-content label, .entry-content tr th, .entry-meta, .entry-utility, #respond label, .navigation, .pingback p, .reply, .widget-title, .wp-caption-text, #mc_embed_signup {
+		font-family: $mn-font;
+	}
+	
+	span.entry-subtitle {
+		font-size: 85%;
+		font-style: italic;
+		font-weight: normal;
+	}
 }
 
 
 /* HEADER ********************************************************************/
-header {
-	margin: 0px auto;
+#header {
+	margin: 50px auto 20px;
+	padding: 0;
 
 	#masthead {
 		@include no-space();
+		width: auto;
+	}
+	
+	#site-title {
 		font-family: $wm-font;
 		text-align: center;
-		width: auto;
 		color: $sv-red;
+		width: auto;
+		
+		a {
+			color: inherit;
+		}
 	}
 
 	.wordmark {
 		margin-top: 0;
 		font-size: 12vw;
+		display: block;
 	}
 	#wordmark-svy {
 		text-align: center;
@@ -72,19 +230,25 @@ header {
 	.eightieth {
 		font-family: $font80;
 		font-size: 4vw;
-		margin: -3vw 0 0 0;
+		margin: 1vw 0 0 0;
 		padding: 0;
 		text-align: center;
 		letter-spacing: 1vw;
 		color: $black;
+		
 		span {
-			color: #24AA56;
+			color: $sv-green;
 			font-weight: bold;
 		}
 	}
 	
+	#savoyards-logo {
+		display: block;
+	}
+	
 	#savoyards-logo img {
 		width: 100%;
+		border: none;
 	}
 }
 
@@ -94,41 +258,251 @@ header {
 	background-color: #FFECB9;
 	padding: 5px;
 	border-radius: 15px;
+	margin: 0 15px 15px;
+	border: 2px solid $sv-red;
 
 	.banner {
 		text-align: center;
+		margin-bottom: 10px;
 		
 		img {
-			border-radius: 15px;
 			width: 100%;
 			max-width: 960px;
 		}
 	}
-}
-
-
-/* MAIN CONTENT **************************************************************/
-.main {
-	font-family: 'Spectral', serif;
-	margin: 25px auto;
-	color: #B80018;
-}
-
-.content{
-	@include content-box();
-	h1, h2, h3, h4, h5, h6 {
-		font-family: $h-font;
-		font-weight: 700;
+	
+	#site-description {
+		width: 100%;
+		text-align: center;
+		margin: 5px 0;
+		font: {
+			size: 1.25em;
+			family: $mn-font;
+		}
+		color: $sv-dk-red;
 	}
 }
 
 
-/* SIDEBAR *******************************************************************/
-aside.sidebar {
-	@include content-box();
-	margin-top: 25px;
+/* NAV ***********************************************************************/
+#main-nav {
+	@include admin-sticky-fix();
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+	padding: 0;
 }
 
+#main-nav #access {
+	padding: 0;
+	position: relative;
+	height: 50px;
+	background-color: $sv-buff;
+	border: 0;
+	border-bottom: 2px solid $sv-dk-buff;
+	
+	a {
+		color: $sv-red;
+		font: {
+			family: $h-font;
+			size: 1.5em;
+			weight: bold;
+		}
+		line-height: 26px;
+		text-decoration: none;
+	}
+	
+	h3.menu-toggle {
+		position: absolute;
+		right: 0vw;
+		top: 1px;
+		height: 50px;
+		width: 20vw;
+		padding-left: 15px;
+		cursor: pointer;
+	
+		span::before, span, span::after {
+			height: 8px;
+			width: 10vw;
+			border-radius: 10vw;
+			background-color: $sv-red;
+			display: block;
+		}
+		
+		span::before, span::after {
+			content: '';
+			margin: 0;
+		}
+		
+		span::before {
+			position: relative;
+			top: -13px;
+		}
+		
+		span::after {
+			position: relative;
+			top: 5px;
+		}
+		
+		span {
+			color: transparent;
+			text-indent: -99999px;
+			margin: 19px 0 0;
+			line-height: 0px;
+		}
+	}
+	
+	.menu-header {
+		padding-top: 50px;
+		margin-left: 0;
+		display: none;
+		
+		ul#menu-top-nav {
+			background-color: $sv-lt-buff;
+			padding-left: 5vw;
+			
+			li {
+				float: none;
+			}
+			li::after, li ul li:first-child::before {
+				content: '';
+				display: block;
+				width: calc(100vw - 20px);
+				height: 1px;
+				margin-left: -5vw;
+				background-color: $sv-lt-red;
+			}
+			li ul li::after, li ul li:first-child::before {
+				margin-left: -12vw;
+				width: calc(100vw - 20px);
+			}
+		}
+	}
+	
+	ul ul {
+		padding-left: 7vw;
+		display: block;
+		width: 100%;
+		position: static;
+		background-color: $sv-lt-buff;
+		float: none;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		
+		li {
+			width: 100%;
+		}
+		
+		a {
+			width: calc(100% - 25px);
+			background: transparent;
+			padding: 2px 0;
+		}
+	}
+	li:hover > a, ul ul :hover > a {
+		background-color: transparent;
+	}
+}
+
+/* MAIN CONTENT **************************************************************/
+.main {
+	font-family: $mn-font;
+	font-size: 16px;
+	margin: 25px auto;
+	color: $sv-red;
+	
+	#content {
+		table {
+			border: 1px solid $sv-red;
+		}
+		tr th, thead th {
+			color: $sv-dk-red;
+			font-size: 18px;
+		}
+		tr td {
+			border-top: 1px solid $sv-red;
+		}
+		.entry-content label {
+			color: $sv-dk-red;
+		}
+	}
+}
+
+.content{
+	@include content-box();
+}
+
+.fieldcontain input[type="text"] {
+    width: 100%;
+}
+
+/* SIDEBAR *******************************************************************/
+body#savoyards-eightieth {
+	aside.sidebar {
+		@include content-box();
+		margin-top: 25px;
+	}
+	#primary, #secondary {
+		float: left;
+		overflow: unset;
+		width: 100%;
+		clear: both;
+	}
+	.widget-title {
+		font-family: $h-font;
+		color: $sv-red;
+	}
+	.widget {
+		margin-top: 30px;
+	}
+	.widget:first-child {
+		margin-top: 0px;
+	}
+	#mc_embed_signup {
+		background: transparent;
+		
+		input.email {
+			@include form-textbar();
+			width: 55%;
+		}
+		
+		input.button {
+			@include form-button();
+		}
+		
+		.clear {
+			display: inline-block;
+		}
+	}
+	
+	::placeholder {
+		color: $sv-lt-red;
+	}
+	::-moz-placeholder {
+		color: $sv-lt-red;
+	}
+	::-webkit-input-placeholder {
+		color: $sv-lt-red;
+	}
+	::-ms-placeholder {
+		color: $sv-lt-red;
+	}
+	
+	#main .widget-area ul ul {
+		margin-left: 0;
+	}
+	
+	.textwidget.custom-html-widget {
+		width: 110%;
+	}
+	
+	.widget_search #s {
+		width: 65%;
+	}
+}
+	
 
 /* FOOTER ********************************************************************/
 footer {
@@ -140,15 +514,42 @@ footer {
 	}
     text-align: center;
     margin-bottom: 25px;
+	
+	#colophon {
+		border-top: 0;
+	}
 }
 
 
 /* RESPONSIVE ****************************************************************/
-@media (min-width: 768px) {
-	header {
+@media (min-width: 600px) {
+	#main-nav #access {
+		h3.menu-toggle {
+			top: 0px;
+			width: 12vw;
+			
+			span::before, span, span::after {
+				width: 7vw;
+			}
+		}
+	}
+	body#savoyards-eightieth {
+		.widget_search #s {
+			width: 70%;
+		}
+	}
+}
+
+@media (min-width: 767px) {
+	
+	/* Header ************************/
+	#header {
+		margin: 0 auto 20px;
+		padding: 0;
+	
 		.wordmark {
 			margin-top: 2.5vw;
-			font-size: 4.95vw;
+			font-size: 6.5vw;
 		}
 		#wordmark-pgh {
 			text-align: right;
@@ -158,12 +559,201 @@ footer {
 			margin-top: 2.5vw;
 		}
 		.eightieth {
-			font-size: 1.5vw;
-			margin: -5px 0 0 0;
+			font-size: 2vw;
+			margin: 5px 0 0 0;
 		}
 	}
 	
-	aside.sidebar {
-		margin-top: 0px;
+	/* Nav ***************************/
+	#main-nav {
+		position: static;
+		width: calc(100% - 30px);
+		z-index: 1;
+		padding: 0;
+	}
+	
+	#main-nav #access {
+		@include content-box();
+		height: auto;
+		
+		h3.menu-toggle {
+			height: 0;
+			width: 0;
+			background-color: transparent;
+			display: none;
+		}
+		
+		.menu-header { 
+			padding-top: 0;
+			display: block;
+			
+			ul#menu-top-nav {
+				padding-left: 0;
+				
+				li {
+					float: left;
+				}
+				li::after, li ul li:first-child::before {
+					display: none;
+					width: 0;
+					height: 0;
+					margin-left: 0;
+					background-color: transparent;
+				}
+				li ul li::after, li ul li:first-child::before {
+					margin-left: -12vw;
+					width: 100vw;
+				}
+			}	
+		}
+		
+		ul ul {
+			box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+			display: none;
+			padding-left: 0;
+			position: absolute;
+			float: left;
+			margin: 0;
+			padding: 10px 0 0 0;
+			top: 100%;
+			z-index: 1;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+			clip: rect(1px, 1px, 1px, 1px);
+			
+			li {
+				width: inherit;
+			}
+			
+			a {
+				background: $sv-lt-buff;
+				width: 300px;
+				padding: 5px;
+			}
+		}
+		
+		ul li:last-child ul {
+			left: -227px;
+		}
+		
+		ul li:hover > ul, ul li:focus > ul, .focus > ul {
+			border-left: 0;
+			clip: auto;
+			overflow: visible;
+			height: auto;
+			width: auto;;
+			display: block;
+		}
+		li:hover > a, ul ul :hover > a {
+			background-color: $sv-red;
+			color: $sv-buff;
+		}
+	}
+	
+	.content {
+		min-height: 1000px;
+	}
+	
+	body#savoyards-eightieth {
+		.banner-container {
+			width: calc(100% - 30px);
+		}
+		aside.sidebar {
+			margin-top: 0px;
+		}
+		.widget_search #s {
+			width: 51%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	#header {
+		.wordmark {
+			margin-top: 45px;
+			font-size: 76px;
+		}
+		#wordmark-svy {
+			margin-top: 45px;
+		}
+		.eightieth {
+			font-size: 24px;
+			margin: 5px 0 0 0;
+		}
+	}
+	body#savoyards-eightieth {
+		#wrapper {
+			width: 992px;
+		}
+		.widget_search #s {
+			width: 65%;
+		}
+	}
+	div#meteor-slideshow {
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	body#savoyards-eightieth {
+		#wrapper {
+			width: 1200px;
+			//position: relative;
+		}
+		#main-nav {
+			width: 780px;
+			margin: 0 0 0 15px;
+		}
+		#container.container {
+			//position: absolute;
+		}
+		aside.sidebar {
+			//position: relative;
+			top: -84px;
+			margin-bottom: -64px;
+		}
+	}
+}
+
+/* HACKS *********************************************************************/
+@media (min-width: 1200px) {
+	body#savoyards-eightieth {
+		/* IE 9- */
+		:root #wrapper {
+			position: relative\9;
+		}
+		:root #container.container {
+			position: absolute\9;
+		}
+		:root aside.sidebar {
+			position: relative\9;
+		}
+	
+		/* IE 10+ */
+		_:-ms-lang(x), #wrapper {
+			position: relative;
+		}
+		_:-ms-lang(x), #container.container {
+			position: absolute;
+		}
+		_:-ms-lang(x), aside.sidebar {
+			position: relative;
+		}
+	}
+}
+
+@media (max-width: 769px) {
+	/* Android Chrome (and some others, unfortunately) */
+	body#savoyards-eightieth:not(*:root) {
+		background: {
+			image: none;
+			color: #FFFCE9;
+			position: 0% 0%;
+			attachment: scroll;
+			size: auto auto;
+		}
 	}
 }
