@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # savoyards-theme
 Pittsburgh Savoyards general theme
-=======
-# savoyards-80th
 
-This is the theme I created for the [Pittsburgh Savoyards](http://pitsburghsavoyards.org)' 80th season. The styles are written in Sass and the theme is Bootstrap responsive.
->>>>>>> 2324eee482fb5353f8a62c975c9ffc626d7db527
+The theme I created for the [Pittsburgh Savoyards](http://pitsburghsavoyards.org), originally starting out as the 80th season theme and cloned into this repository to serve as the general theme repository. The styles are written in Sass and the theme is Bootstrap responsive.

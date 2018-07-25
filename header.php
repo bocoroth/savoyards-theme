@@ -89,9 +89,6 @@
 								<span id="wordmark-svy" class="col-xs-8 col-sm-5 wordmark">Savoyards</span>
 							</a>
 					</<?php echo $heading_tag; ?>>
-					<div class="row">
-						<div class="col-xs-12 eightieth">Our <span>80th</span> Season!</div>
-					</div>
 				</div><!-- #branding -->
 			</div><!-- #masthead -->
 		</header><!-- #header -->
