@@ -1,0 +1,718 @@
+/* Pittsburgh Savoyards 80th season main CSS, v. 1.6.48 
+
+   DO NOT EDIT this CSS file directly!!! 
+
+   */
+/* GLOBALS *******************************************************************/
+body#savoyards-eightieth {
+	background-image: url("img/savoyards-bg.png");
+	background-color: #FFFCE9;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+body#savoyards-eightieth a:link {
+	color: #12552b;
+}
+
+body#savoyards-eightieth a:hover, body#savoyards-eightieth a:active {
+	color: #92d5ab;
+	text-decoration: underline;
+}
+
+body#savoyards-eightieth a:visited {
+	color: #24AA56;
+}
+
+body#savoyards-eightieth p {
+	word-break: break-word;
+}
+
+body#savoyards-eightieth img {
+	max-width: 100%;
+	height: auto;
+}
+
+body#savoyards-eightieth ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+body#savoyards-eightieth input[type="text"], body#savoyards-eightieth select {
+	display: inline-block;
+	border-radius: 10px;
+	color: #B80018;
+	background-color: #fff6dc;
+	font-family: "Philosopher", sans-serif;
+	font-size: 16px;
+	border: 1px solid #B80018;
+	padding: 8px 0;
+	margin: 0 4% 10px 0;
+	text-indent: 5px;
+}
+
+body#savoyards-eightieth select {
+	height: 42px;
+}
+
+body#savoyards-eightieth button, body#savoyards-eightieth input[type="button"], body#savoyards-eightieth input[type="submit"] {
+	border-radius: 10px;
+	background-color: #B80018;
+	color: #FFECB9;
+	font-family: "Philosopher", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	height: 35px;
+	line-height: 37px;
+	border-style: hidden;
+}
+
+body#savoyards-eightieth button:hover, body#savoyards-eightieth input[type="button"]:hover, body#savoyards-eightieth input[type="submit"]:hover {
+	background-color: #dc808c;
+}
+
+body#savoyards-eightieth input[type="checkbox"], body#savoyards-eightieth #mc_embed_signup .mc-field-group.input-group input {
+	width: 25px;
+}
+
+body#savoyards-eightieth ul li {
+	text-indent: -45px;
+	margin-left: 45px;
+}
+
+body#savoyards-eightieth ul li:before {
+	content: '\261E';
+	font-size: 3em;
+	font-family: "Segoe UI Symbol", "Philosopher", sans-serif;
+	/* MS Edge hack */
+	position: relative;
+	top: 0.25em;
+	color: #5c000c;
+}
+
+body#savoyards-eightieth #wpadminbar ul li, body#savoyards-eightieth #main-nav ul li, body#savoyards-eightieth #meteor-slideshow ul li, body#savoyards-eightieth .mc-field-group ul li, body#savoyards-eightieth .input-group ul li, body#savoyards-eightieth ul li.widget-container {
+	text-indent: 0;
+	margin-left: 0;
+}
+
+body#savoyards-eightieth #wpadminbar ul li:before, body#savoyards-eightieth #main-nav ul li:before, body#savoyards-eightieth #meteor-slideshow ul li:before, body#savoyards-eightieth .mc-field-group ul li:before, body#savoyards-eightieth .input-group ul li:before, body#savoyards-eightieth ul li.widget-container:before {
+	content: '';
+	font-size: 0;
+}
+
+body#savoyards-eightieth .full-width {
+	width: 100%;
+}
+
+body#savoyards-eightieth #wrapper {
+	padding: 0;
+	background: transparent;
+}
+
+body#savoyards-eightieth #access, body#savoyards-eightieth #access .menu-header, body#savoyards-eightieth div.menu, body#savoyards-eightieth #colophon, body#savoyards-eightieth #branding, body#savoyards-eightieth #main, body#savoyards-eightieth #wrapper, body#savoyards-eightieth #site-info {
+	width: 100%;
+}
+
+body#savoyards-eightieth #main {
+	overflow: unset;
+	padding: 15px 0 0 0;
+}
+
+body#savoyards-eightieth #container, body#savoyards-eightieth #content {
+	margin: 0;
+}
+
+body#savoyards-eightieth .row {
+	width: 100%;
+	margin: 0;
+}
+
+body#savoyards-eightieth h1, body#savoyards-eightieth h2, body#savoyards-eightieth h3, body#savoyards-eightieth h4, body#savoyards-eightieth h5, body#savoyards-eightieth h6, body#savoyards-eightieth #content .entry-title {
+	color: #B80018;
+	font-family: "Philosopher", sans-serif;
+	font-weight: 700;
+}
+
+body#savoyards-eightieth #content, body#savoyards-eightieth #content input, body#savoyards-eightieth #content textarea {
+	color: #5c000c;
+}
+
+body#savoyards-eightieth #cancel-comment-reply-link, body#savoyards-eightieth .form-allowed-tags, body#savoyards-eightieth #site-info, body#savoyards-eightieth #wp-calendar, body#savoyards-eightieth .comment-meta, body#savoyards-eightieth .entry-content label, body#savoyards-eightieth .entry-content tr th, body#savoyards-eightieth .entry-meta, body#savoyards-eightieth .entry-utility, body#savoyards-eightieth #respond label, body#savoyards-eightieth .navigation, body#savoyards-eightieth .pingback p, body#savoyards-eightieth .reply, body#savoyards-eightieth .widget-title, body#savoyards-eightieth .wp-caption-text, body#savoyards-eightieth #mc_embed_signup {
+	font-family: "Spectral", serif;
+}
+
+body#savoyards-eightieth span.entry-subtitle {
+	font-size: 85%;
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* HEADER ********************************************************************/
+#header {
+	margin: 50px auto 20px;
+	padding: 0;
+}
+
+#header #masthead {
+	padding: 0;
+	margin: 0;
+	width: auto;
+}
+
+#header #site-title {
+	font-family: "IM Fell English SC", serif;
+	text-align: center;
+	color: #B80018;
+	width: auto;
+}
+
+#header #site-title a {
+	color: inherit;
+}
+
+#header .wordmark {
+	margin-top: 0;
+	font-size: 12vw;
+	display: block;
+}
+
+#header #wordmark-svy {
+	text-align: center;
+	margin-top: -12vw;
+	letter-spacing: .345vw;
+}
+
+#header #wordmark-pgh {
+	text-align: center;
+}
+
+#header .eightieth {
+	font-family: "Norican", cursive;
+	font-size: 4vw;
+	margin: 1vw 0 0 0;
+	padding: 0;
+	text-align: center;
+	letter-spacing: 1vw;
+	color: #000000;
+}
+
+#header .eightieth span {
+	color: #24AA56;
+	font-weight: bold;
+}
+
+#header #savoyards-logo {
+	display: block;
+}
+
+#header #savoyards-logo img {
+	width: 100%;
+	border: none;
+}
+
+/* BANNER ********************************************************************/
+#banner {
+	background-color: #FFECB9;
+	padding: 5px;
+	border-radius: 15px;
+	margin: 0 15px 15px;
+	border: 2px solid #B80018;
+}
+
+#banner .banner {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#banner .banner img {
+	width: 100%;
+	max-width: 960px;
+}
+
+#banner #site-description {
+	width: 100%;
+	text-align: center;
+	margin: 5px 0;
+	font-size: 1.25em;
+	font-family: "Spectral", serif;
+	color: #5c000c;
+}
+
+/* NAV ***********************************************************************/
+#main-nav {
+	top: 0px;
+	position: absolute;
+	width: 100%;
+	z-index: 99;
+	padding: 0;
+}
+
+.admin-bar #main-nav {
+	top: 46px;
+}
+
+#main-nav #access {
+	padding: 0;
+	position: relative;
+	height: 50px;
+	background-color: #FFECB9;
+	border: 0;
+	border-bottom: 2px solid #80765d;
+}
+
+#main-nav #access a {
+	color: #B80018;
+	font-family: "Philosopher", sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 26px;
+	text-decoration: none;
+}
+
+#main-nav #access h3.menu-toggle {
+	position: absolute;
+	right: 0vw;
+	top: 1px;
+	height: 50px;
+	width: 20vw;
+	padding-left: 15px;
+	cursor: pointer;
+}
+
+#main-nav #access h3.menu-toggle span::before, #main-nav #access h3.menu-toggle span, #main-nav #access h3.menu-toggle span::after {
+	height: 8px;
+	width: 10vw;
+	border-radius: 10vw;
+	background-color: #B80018;
+	display: block;
+}
+
+#main-nav #access h3.menu-toggle span::before, #main-nav #access h3.menu-toggle span::after {
+	content: '';
+	margin: 0;
+}
+
+#main-nav #access h3.menu-toggle span::before {
+	position: relative;
+	top: -13px;
+}
+
+#main-nav #access h3.menu-toggle span::after {
+	position: relative;
+	top: 5px;
+}
+
+#main-nav #access h3.menu-toggle span {
+	color: transparent;
+	text-indent: -99999px;
+	margin: 19px 0 0;
+	line-height: 0px;
+}
+
+#main-nav #access .menu-header {
+	padding-top: 50px;
+	margin-left: 0;
+	display: none;
+}
+
+#main-nav #access .menu-header ul#menu-top-nav {
+	background-color: #fff6dc;
+	padding-left: 5vw;
+}
+
+#main-nav #access .menu-header ul#menu-top-nav li {
+	float: none;
+}
+
+#main-nav #access .menu-header ul#menu-top-nav li::after, #main-nav #access .menu-header ul#menu-top-nav li ul li:first-child::before {
+	content: '';
+	display: block;
+	width: calc(100vw - 20px);
+	height: 1px;
+	margin-left: -5vw;
+	background-color: #dc808c;
+}
+
+#main-nav #access .menu-header ul#menu-top-nav li ul li::after, #main-nav #access .menu-header ul#menu-top-nav li ul li:first-child::before {
+	margin-left: -12vw;
+	width: calc(100vw - 20px);
+}
+
+#main-nav #access ul ul {
+	padding-left: 7vw;
+	display: block;
+	width: 100%;
+	position: static;
+	background-color: #fff6dc;
+	float: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+#main-nav #access ul ul li {
+	width: 100%;
+}
+
+#main-nav #access ul ul a {
+	width: calc(100% - 25px);
+	background: transparent;
+	padding: 2px 0;
+}
+
+#main-nav #access li:hover > a, #main-nav #access ul ul :hover > a {
+	background-color: transparent;
+}
+
+/* MAIN CONTENT **************************************************************/
+.main {
+	font-family: "Spectral", serif;
+	font-size: 16px;
+	margin: 25px auto;
+	color: #B80018;
+}
+
+.main #content table {
+	border: 1px solid #B80018;
+}
+
+.main #content tr th, .main #content thead th {
+	color: #5c000c;
+	font-size: 18px;
+}
+
+.main #content tr td {
+	border-top: 1px solid #B80018;
+}
+
+.main #content .entry-content label {
+	color: #5c000c;
+}
+
+.content {
+	background-color: #FFECB9;
+	padding: 20px;
+	border-radius: 15px;
+	border: 2px solid #B80018;
+}
+
+.fieldcontain input[type="text"] {
+	width: 100%;
+}
+
+/* SIDEBAR *******************************************************************/
+body#savoyards-eightieth aside.sidebar {
+	background-color: #FFECB9;
+	padding: 20px;
+	border-radius: 15px;
+	border: 2px solid #B80018;
+	margin-top: 25px;
+}
+
+body#savoyards-eightieth #primary, body#savoyards-eightieth #secondary {
+	float: left;
+	overflow: unset;
+	width: 100%;
+	clear: both;
+}
+
+body#savoyards-eightieth .widget-title {
+	font-family: "Philosopher", sans-serif;
+	color: #B80018;
+}
+
+body#savoyards-eightieth .widget {
+	margin-top: 30px;
+}
+
+body#savoyards-eightieth .widget:first-child {
+	margin-top: 0px;
+}
+
+body#savoyards-eightieth #mc_embed_signup {
+	background: transparent;
+}
+
+body#savoyards-eightieth #mc_embed_signup input.email {
+	display: inline-block;
+	border-radius: 10px;
+	color: #B80018;
+	background-color: #fff6dc;
+	font-family: "Philosopher", sans-serif;
+	font-size: 16px;
+	border: 1px solid #B80018;
+	padding: 8px 0;
+	margin: 0 4% 10px 0;
+	text-indent: 5px;
+	width: 55%;
+}
+
+body#savoyards-eightieth #mc_embed_signup input.button {
+	border-radius: 10px;
+	background-color: #B80018;
+	color: #FFECB9;
+	font-family: "Philosopher", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	height: 35px;
+	line-height: 37px;
+	border-style: hidden;
+}
+
+body#savoyards-eightieth #mc_embed_signup input.button:hover {
+	background-color: #dc808c;
+}
+
+body#savoyards-eightieth #mc_embed_signup .clear {
+	display: inline-block;
+}
+
+body#savoyards-eightieth ::placeholder {
+	color: #dc808c;
+}
+
+body#savoyards-eightieth ::-moz-placeholder {
+	color: #dc808c;
+}
+
+body#savoyards-eightieth ::-webkit-input-placeholder {
+	color: #dc808c;
+}
+
+body#savoyards-eightieth ::-ms-placeholder {
+	color: #dc808c;
+}
+
+body#savoyards-eightieth #main .widget-area ul ul {
+	margin-left: 0;
+}
+
+body#savoyards-eightieth .textwidget.custom-html-widget {
+	width: 110%;
+}
+
+body#savoyards-eightieth .widget_search #s {
+	width: 65%;
+}
+
+/* FOOTER ********************************************************************/
+footer {
+	color: #12552b;
+	font-family: "Philosopher", sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+footer #colophon {
+	border-top: 0;
+}
+
+/* RESPONSIVE ****************************************************************/
+@media (min-width: 600px) {
+	#main-nav #access h3.menu-toggle {
+		top: 0px;
+		width: 12vw;
+	}
+	#main-nav #access h3.menu-toggle span::before, #main-nav #access h3.menu-toggle span, #main-nav #access h3.menu-toggle span::after {
+		width: 7vw;
+	}
+	body#savoyards-eightieth .widget_search #s {
+		width: 70%;
+	}
+}
+
+@media (min-width: 767px) {
+	/* Header ************************/
+	#header {
+		margin: 0 auto 20px;
+		padding: 0;
+	}
+	#header .wordmark {
+		margin-top: 2.5vw;
+		font-size: 6.5vw;
+	}
+	#header #wordmark-pgh {
+		text-align: right;
+	}
+	#header #wordmark-svy {
+		text-align: left;
+		margin-top: 2.5vw;
+	}
+	#header .eightieth {
+		font-size: 2vw;
+		margin: 5px 0 0 0;
+	}
+	/* Nav ***************************/
+	#main-nav {
+		position: static;
+		width: calc(100% - 30px);
+		z-index: 1;
+		padding: 0;
+	}
+	#main-nav #access {
+		background-color: #FFECB9;
+		padding: 20px;
+		border-radius: 15px;
+		border: 2px solid #B80018;
+		height: auto;
+	}
+	#main-nav #access h3.menu-toggle {
+		height: 0;
+		width: 0;
+		background-color: transparent;
+		display: none;
+	}
+	#main-nav #access .menu-header {
+		padding-top: 0;
+		display: block;
+	}
+	#main-nav #access .menu-header ul#menu-top-nav {
+		padding-left: 0;
+	}
+	#main-nav #access .menu-header ul#menu-top-nav li {
+		float: left;
+	}
+	#main-nav #access .menu-header ul#menu-top-nav li::after, #main-nav #access .menu-header ul#menu-top-nav li ul li:first-child::before {
+		display: none;
+		width: 0;
+		height: 0;
+		margin-left: 0;
+		background-color: transparent;
+	}
+	#main-nav #access .menu-header ul#menu-top-nav li ul li::after, #main-nav #access .menu-header ul#menu-top-nav li ul li:first-child::before {
+		margin-left: -12vw;
+		width: 100vw;
+	}
+	#main-nav #access ul ul {
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+		-webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+		display: none;
+		padding-left: 0;
+		position: absolute;
+		float: left;
+		margin: 0;
+		padding: 10px 0 0 0;
+		top: 100%;
+		z-index: 1;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+	#main-nav #access ul ul li {
+		width: inherit;
+	}
+	#main-nav #access ul ul a {
+		background: #fff6dc;
+		width: 300px;
+		padding: 5px;
+	}
+	#main-nav #access ul li:last-child ul {
+		left: -227px;
+	}
+	#main-nav #access ul li:hover > ul, #main-nav #access ul li:focus > ul, #main-nav #access .focus > ul {
+		border-left: 0;
+		clip: auto;
+		overflow: visible;
+		height: auto;
+		width: auto;
+		display: block;
+	}
+	#main-nav #access li:hover > a, #main-nav #access ul ul :hover > a {
+		background-color: #B80018;
+		color: #FFECB9;
+	}
+	.content {
+		min-height: 1000px;
+	}
+	body#savoyards-eightieth .banner-container {
+		width: calc(100% - 30px);
+	}
+	body#savoyards-eightieth aside.sidebar {
+		margin-top: 0px;
+	}
+	body#savoyards-eightieth .widget_search #s {
+		width: 51%;
+	}
+}
+
+@media (min-width: 992px) {
+	#header .wordmark {
+		margin-top: 45px;
+		font-size: 76px;
+	}
+	#header #wordmark-svy {
+		margin-top: 45px;
+	}
+	#header .eightieth {
+		font-size: 24px;
+		margin: 5px 0 0 0;
+	}
+	body#savoyards-eightieth #wrapper {
+		width: 992px;
+	}
+	body#savoyards-eightieth .widget_search #s {
+		width: 65%;
+	}
+	div#meteor-slideshow {
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	body#savoyards-eightieth #wrapper {
+		width: 1200px;
+	}
+	body#savoyards-eightieth #main-nav {
+		width: 780px;
+		margin: 0 0 0 15px;
+	}
+	body#savoyards-eightieth aside.sidebar {
+		top: -84px;
+		margin-bottom: -64px;
+	}
+}
+
+/* HACKS *********************************************************************/
+@media (min-width: 1200px) {
+	body#savoyards-eightieth {
+		/* IE 9- */
+		/* IE 10+ */
+	}
+	body#savoyards-eightieth :root #wrapper {
+		position: relative\9;
+	}
+	body#savoyards-eightieth :root #container.container {
+		position: absolute\9;
+	}
+	body#savoyards-eightieth :root aside.sidebar {
+		position: relative\9;
+	}
+	body#savoyards-eightieth _:-ms-lang(x), body#savoyards-eightieth #wrapper {
+		position: relative;
+	}
+	body#savoyards-eightieth _:-ms-lang(x), body#savoyards-eightieth #container.container {
+		position: absolute;
+	}
+	body#savoyards-eightieth _:-ms-lang(x), body#savoyards-eightieth aside.sidebar {
+		position: relative;
+	}
+}
+
+@media (max-width: 769px) {
+	/* Android Chrome (and some others, unfortunately) */
+	body#savoyards-eightieth:not(*:root) {
+		background-image: none;
+		background-color: #FFFCE9;
+		background-position: 0% 0%;
+		background-attachment: scroll;
+		background-size: auto auto;
+	}
+}
