@@ -28,7 +28,7 @@
 				<!--<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php bloginfo( 'name' ); ?>
 				</a> -->
-				&copy;2017 The Pittsburgh Savoyards, Inc.
+				&copy;2003-<?php echo date('Y'); ?> The Pittsburgh Savoyards, Inc.
 			</div><!-- #site-info -->
 
 			<div id="site-generator">
